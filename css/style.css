@@ -1,0 +1,731 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Kalam:wght@300;400;700&family=Tangerine:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=El+Messiri:wght@400;500;600;700&family=Kalam:wght@300;400;700&family=Tangerine:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Dosis&family=Lalezar&family=Lexend+Deca:wght@100;400&family=Noto+Serif+Display&family=Poppins:wght@200;500&family=Raleway:wght@300;600&family=Tajawal:wght@300;400;700&family=Varela+Round&display=swap');
+
+/* -----------------------header style starts--------------------------- */
+ ::-webkit-scrollbar{ 
+     height: 8px; 
+     width: 16px; 
+  } 
+  :-webkit-scrollbar-track{
+    background-color: transparent;
+ }
+ ::-webkit-scrollbar-thumb{
+    background-image:linear-gradient(to bottom,rgba(25, 72, 182, 0.858),rgb(67, 104, 130),rgb(105, 54, 168)) ;
+ }
+ html{ 
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+ }
+ .header{
+    padding:10px;
+    border-bottom:1px solid rgba(0,0,0,.1);
+    box-shadow:0px 0px 15px 0px rgb(0 0 0 / 15%);
+ }
+ 
+ .header.active{
+    background-color: rgba(180, 184, 192, 0.92);
+    box-shadow:0px 0px 15px 0px rgb(55, 57, 68);
+    border:0;
+ }
+ .header .nav a{
+    margin:0 10px;
+    font-family: 'Baloo 2', cursive;
+    color: rgba(0, 0, 0, 0.696);
+    text-decoration: none;
+ }
+ 
+ .header .nav a:hover{
+    color: rgb(25, 72, 182);
+    text-shadow: 1px 2px 3px rgb(120, 120, 186) ;
+ }
+ #menu-btn{
+    font-size: 2.5rem;
+    color:black;
+    cursor: pointer;
+    display: none;
+ }
+
+ .header .logo{
+    font-size:35px;
+    color:rgb(58, 58, 121);
+    text-decoration: none;
+    font-family: 'Baloo 2', cursive;
+    font-weight: 500;
+    text-shadow: 1px 2px 5px rgba(4, 4, 6, 0.58) ;
+ }
+ 
+ .header .logo span{
+    color:rgb(7, 23, 54);
+    text-shadow: 1px 2px 5px rgb(4, 4, 6) ;
+    font-family: 'Oleo Script Swash Caps';
+    font-size: 30px;
+ }
+ .header .logo span.t {
+    color: white;
+ }
+ /* ------------------------------header style ends---------------------------------- */
+
+
+ /* --------------------------------home style starts---------------------------------- */
+
+.home{
+    background-color: rgba(0, 0, 0, 0.192);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 450px;
+ }
+ .home .content{
+    padding-top: 160px;
+
+ }
+ .home .content h3{
+    font-family: 'Baloo 2', cursive;
+ font-size: 33px;
+ }
+ .home .content p{
+    font-family: 'Baloo 2', cursive;
+    color: rgba(0, 0, 0, 0.696);
+ }
+
+.home .first .impg{
+    width: 350px;
+    margin-top: 50px;
+}
+
+/* --------------------------------home style ends---------------------------------- */
+
+
+ /* -------------------------------media queries start--------------------------------  */
+
+@media (max-width:991px){
+
+    html{
+       font-size: 55%;
+    }
+ 
+    .header .link-btn{
+       display: none;
+    }
+
+    section{
+        padding:5rem 2rem;
+     }
+}
+
+
+@media (max-width:768px){
+   
+    section{
+        padding:3rem 1rem;
+     }
+   
+   
+    #menu-btn{
+        
+        display: inline-block;
+        transition: .2s linear;
+     }
+
+     #menu-btn.fa-times{
+        transform: rotate(180deg);
+     }
+
+     .header .nav{
+        position: absolute;
+        top:99%; left:0; right:0;
+        background-color: var(--white);
+        border-top: var(--border);
+        border-bottom: var(--border);
+        padding:1rem 0;
+        text-align: center;
+        flex-flow: column;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: .2s linear;
+     }
+
+     .header .nav.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+     }
+
+     .header .nav a {
+        margin:1rem 0;
+        font-size: 2rem;
+     }
+    
+     .home{
+        background-position: left;
+     }
+  
+     .home .content{
+        width: auto;
+     }
+}
+
+
+@media (max-width:450px){
+
+    html{
+       font-size: 50%;
+    }
+
+    .home .content h3{
+        font-size: 4rem;
+     }
+  
+     .heading{
+        font-size: 4rem;
+     }
+ 
+}
+/* -------------------------------media queries end--------------------------------  */
+
+/*--------------------------- ------about style starts---------------------------- */
+.about{
+  margin-top: 80px;
+  
+}
+.about .img .fimg{
+ width: 500px;
+ margin-bottom: 60px;
+}
+.about .p1{
+color: rgb(25, 72, 182);
+font-weight: 400;
+text-shadow: 2px 1px 5px rgba(41, 41, 142, 0.863) ;
+font-size: 25px;
+font-family: 'Oleo Script Swash Caps';
+margin-bottom: 5px;
+} 
+.about .serving{
+ font-family: 'Baloo 2', cursive;
+ font-size: 33px;
+ }
+.about .ser{
+    font-family: 'Baloo 2', cursive;
+    color: rgba(0, 0, 0, 0.696);
+}
+
+.about .link-btn,.home .link-btn, .link-btn{
+    text-decoration: none !important;
+    font-family: 'Baloo 2', cursive;
+    padding: 12px;
+    background-image: linear-gradient(to right, rgb(38, 44, 71) 0%, rgb(154, 192, 223) 50%, rgb(38, 44, 71) 100%);
+    box-shadow: 0px 14px 10px -2px rgba(11, 11, 11, 0.406) ;
+    border-radius: 10px;
+    color: rgb(157, 162, 177) !important;
+    font-weight: 500;
+    font-size: 14px;
+    transition: all 300ms linear 0s;
+    background-size: 200%;
+}
+.link-btn:hover{
+    background-position: right center;
+}
+/*------------------------------------ about style ends ---------------------------- */
+
+/*-------------------------------- services style start ---------------------------- */
+.services{
+    background-color:rgba(205, 205, 200, 0.135) ;
+    padding-bottom: 50px;
+}
+.services .our, .pricing .price h2{
+    margin-top: 30px;
+    padding-top: 60px;
+    text-align: center;
+    color:rgb(25, 72, 182) ;
+    text-shadow:2px 1px 5px rgba(41, 41, 142, 0.863);
+    font-family: 'Oleo Script Swash Caps';
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+.services .box{
+    position: relative;
+    text-align: center;
+    background-color: white;
+    height: 250px;
+    margin-top: 20px;
+    box-shadow: 0 3px 10px 0 rgb(0 0 0 / 20%);
+    transition: all 1s ease;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.services .box:hover{
+    box-shadow: 0px 0px 10px rgb(2 1 7 / 20%);
+    transform: scale(1.1,1.1);
+}
+.services .box h3{
+    padding-top: 40px;
+    font-size: 20px;
+    margin-bottom: 13px;
+}
+.services .box p{
+    font-size: 15px;
+    font-family: 'Baloo 2', cursive;
+    color: rgba(0, 0, 0, 0.696);
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.services .box img{
+    position: absolute;  
+    width: 60px;
+}
+.services .box .pic{
+    width: 90px;
+    margin-top: -25px;
+}
+/*-------------------------------- services style end------------------------------- */
+
+
+/*------------------------------- pricing style starts------------------------------- */
+.pricing{
+    margin-bottom: 100px;
+}
+.pricing .pricing_card1{
+    margin-right:-30px;
+    margin-left: 80px;
+    margin-top: 30px;
+}
+.pricing .pricing_card3{
+    margin-right:80px;
+    margin-left: -30px;
+    margin-top: 30px;
+}
+.pricing .price{
+    text-align: center;
+    margin-bottom: 70px;
+}
+.pricing .price p{
+    font-family: 'Baloo 2', cursive;
+    color: rgba(0, 0, 0, 0.696);
+    font-size: 20px;
+}
+.pricing .pricing_card1 .pricing_header{
+    position: relative;
+    background-color: #45b7a2;
+    border-top-left-radius: 15px;
+    height: 80px;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.34);
+}
+.pricing .pricing_card2 .pricing_header{
+    position: relative;
+    background-color: #f95b3e;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 100px;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.34);
+    border: 1px solid transparent;
+
+}
+.pricing .pricing_card3 .pricing_header{
+    position: relative;
+    background-color: #118083;
+    border-top-right-radius: 15px;
+    height: 80px;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.34);
+}
+.pricing_card1 .pricing_header img, .pricing_card3 .pricing_header img {
+    position: absolute;
+    right: 10px;
+    top: 40px;
+    width: 90px;
+}
+ .pricing .pricing_card1 .pricing_header h3, .pricing .pricing_card3 .pricing_header h3{
+    font-size: 20px ;
+    font-family: 'Baloo 2', cursive;
+    color: white;
+    font-weight: 500;
+    padding-top: 30px;
+    padding-left: 40px;
+}
+
+.pricing_card1 .pricing_body{
+    border: 1px solid transparent;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow:  0 3px 10px 0 rgb(0 0 0 / 20%);
+}
+.pricing_card2 .pricing_body{
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: 1px solid transparent;
+    box-shadow:  0 3px 7px 0 rgb(0 0 0 / 20%);
+
+}
+.pricing_card3 .pricing_body{
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border: 1px solid transparent;
+    box-shadow:  0 3px 10px 0 rgb(0 0 0 / 20%);
+}
+.pricing_card1 .pricing_body .pri,.pricing_card2 .pricing_body .pri, .pricing_card3 .pricing_body .pri {
+    margin-top: 25px;
+    margin-left: 30px;
+    margin-bottom: 10px;
+    font-family: 'Baloo 2', cursive;
+    font-weight: 600;
+    
+}
+.pricing_card1 .pricing_body .pri sup, .pricing_card2 .pricing_body .pri sup, .pricing_card3 .pricing_body .pri sup{
+    font-size: 30px;
+}
+.pricing_card1 .pricing_body .pri span, .pricing_card2 .pricing_body .pri span, .pricing_card3 .pricing_body .pri span{
+    font-size: 60px;
+}
+.pricing_card1 .pricing_body .benefits, .pricing_card2 .pricing_body .benefits, .pricing_card3 .pricing_body .benefits{
+    color: rgba(0, 0, 0, 0.696);
+    margin-bottom: 40px;
+}
+.pricing_card2 .pricing_header img{
+    width: 100px;
+    position: absolute;
+    right: 7px;
+    top: 55px;
+}
+.pricing .pricing_card2 .pricing_header h3{
+    font-size: 21px ;
+    font-family: 'Baloo 2', cursive;
+    color: white;
+    font-weight: 500;
+    padding-top: 35px;
+    padding-left: 20px;
+}
+/*------------------------------- pricing style ends--------------------------------- */
+
+/*------------------------------- FAQ style start----------------------------------- */
+
+.FAQ{
+    background-color:rgba(205, 205, 200, 0.135);
+    padding-bottom: 80px;
+}
+.FAQ .title{
+    padding-bottom: 40px;
+    margin-top: 30px;
+    padding-top: 60px;
+    text-align: center;
+    color:rgb(25, 72, 182) ;
+    text-shadow:2px 1px 5px rgba(41, 41, 142, 0.863);
+    font-family: 'Oleo Script Swash Caps';
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+.FAQ table i{
+    color: rgb(68, 68, 134);
+    
+}
+.FAQ table tr td{
+    margin-left: 30px;
+}
+.con{
+    margin-left: 20px;
+    font-family: 'Baloo 2', cursive;
+    bottom: 1px solid black;
+}
+.con h4{
+    padding-bottom: 20px;
+    font-size: 20px;
+    font-family: 'Baloo 2', cursive;
+    margin-right: 20px;
+}
+.FAQ table .par{
+    font-family: 'Baloo 2', cursive;
+    color: rgba(0, 0, 0, 0.696);
+    padding-bottom: 35px;
+    margin-right: 20px;
+    border-bottom: 1px solid transparent;
+    box-shadow: 0px 2px 4px 0px rgba(44, 44, 59, 0.689);
+    padding-left: 20px;
+    padding-top: 15px;
+    background-color: #d1d6ea5f;
+    background-image: linear-gradient(to left,#c8cfec41, #bcebd542, #e9e1b341, #ead1d43e);
+}
+/*------------------------------- FAQ style ends----------------------------------- */
+
+/*------------------------------- Reviews style start------------------------------- */
+.reviews{
+    text-align:center ;
+    background-color: white;
+ }
+ .reviews h1, .contact h1{
+    color: rgb(25, 72, 182);
+    font-weight: 400;
+    text-shadow: 2px 1px 5px rgba(41, 41, 142, 0.863) ;
+    font-size: 35px;
+    font-family: 'Oleo Script Swash Caps';
+    margin-bottom: 5px;
+    padding-bottom: 50px;
+   margin-top: 100px;
+ }
+
+ .reviews .box p{
+    margin-bottom: 0;
+    font-family: 'Baloo 2', cursive;
+    color: rgba(0, 0, 0, 0.696);
+    padding-top: 25px;
+    padding-bottom: 25px;
+ }
+ .reviews .box img{
+    width: 60px;
+    border-radius: 50px;
+    margin-top: 20px;
+ }
+ .reviews .box .stars{
+    margin-bottom: 20px;
+    display: inline-block;
+ }
+ .reviews .box .stars i{
+    color:rgb(219, 184, 68);
+    margin-right: -5px;
+ }
+ .reviews .box h3{
+    font-size: 22px;
+    color:black;
+    font-family: 'Baloo 2', cursive;
+    text-shadow: 3px 5px 10px black;
+    font-weight: 600;
+ }
+ .reviews .box span{
+    color:rgb(9, 109, 57);
+    font-size: 20px;
+    font-family: 'Baloo 2', cursive;
+ }
+
+ .reviews .box{
+    border: 1px solid #eee;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow:  0 3px 10px 0 rgb(0 0 0 / 20%);
+    margin-bottom: 80px;
+    padding-bottom: 20px;
+    background-color: rgba(194, 184, 216, 0.247);
+    transition: all 1s ease;
+ }
+ .reviews .box:hover{
+    transform: scale(1.1,1.1);
+ }
+ /* -------------------Reviews style end------------------- */
+
+
+ /*------------------- doctors style starts----------------- */
+ 
+.doctors{
+    background-color:rgba(205, 205, 200, 0.135);
+    padding-bottom: 100px;
+}
+.doctors .doct{
+    color: rgb(25, 72, 182);
+    font-weight: 400;
+    text-shadow: 2px 1px 5px rgba(41, 41, 142, 0.863) ;
+    font-size: 35px;
+    font-family: 'Oleo Script Swash Caps';
+    margin-bottom: 5px;
+    padding-bottom: 50px;
+   margin-top: 40px;
+   text-align: center;
+   padding-top: 60px;
+}
+.doctors table{
+    margin-left: 28px;
+}
+.cbody{
+    text-align: center;
+}
+.doctors .cbody .name{
+    text-align: center;
+    font-size: 18px;
+    color: #222222;
+    font-family: "Raleway", sans-serif;
+    margin-bottom: 5px;
+    margin-top: 20px;
+}
+.doctors .cbody .na{
+    font-family: 'Baloo 2', cursive;
+}
+.doctors .cbody .m{
+    margin-bottom: 0px;
+    font-family: "Raleway", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #4584b7;
+    text-shadow: 3px 3px 5px rgba(63, 59, 59, 0.603);
+}
+.doctors .cbody .n{
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: #873e51;
+    text-shadow: 3px 3px 5px rgba(63, 59, 59, 0.603);
+}
+ /*------------------- doctors style ends------------------- */
+
+
+/*------------------ contact style starts----------------- */
+.contact{
+    text-align: center;
+    background-color:rgba(205, 205, 200, 0.135) ;
+    padding-bottom: 100px; 
+    background-color: white;
+    margin-top: 50px;
+
+}
+.contact form{
+    border-radius: 20px;
+    background-color: lightgray ;
+    width: 400px;
+    margin:0 auto;
+}
+.contact form .message{ 
+     margin-bottom: 0px; 
+     border-radius: 10px; 
+     box-shadow: 0 5px 15px 5px rgba(0, 0, 0, 0.436);
+     background-color: rgba(57, 62, 69, 0.669); 
+     padding: 15px ;  
+     font-size: 20px; 
+     color: white; 
+     text-align: center; 
+     font-family: "Raleway", sans-serif;
+
+ } 
+.contact form .box{
+    width: 350px;
+    margin-top:5px;
+    margin-bottom: 18px;
+    border-radius: 10px;
+    background-color: white;
+    padding: 8px;
+    font-size: 15px;
+    font-family: 'Baloo 2', cursive;
+    border-top: 2px solid  rgb(84, 66, 20) ;
+    border-left: 2px solid  rgb(84, 66, 20) ;
+    border-right: 2px solid  rgb(120, 109, 76);
+    border-bottom: 2px solid rgb(120, 109, 76) ;
+    color: black;
+    background-image: linear-gradient(to right,rgba(210, 214, 179, 0.402),rgba(102, 97, 72, 0.374));
+}
+.contact form span{
+    font-size: 30px;
+    color: rgb(20, 30, 79);
+    text-shadow: 2px 3px 6px rgba(0, 0, 0, 0.804);
+    float: left;
+    margin-left: 25px;
+    font-family: 'Tangerine', cursive;
+}
+.contact .name{
+    margin-top: 30px;
+}
+.contact .link-btn{
+    border: none;
+    margin-bottom: 30px;
+}
+.form_box{
+ border-radius: 20px;
+ box-shadow: 0 5px 15px 5px rgba(0, 0, 0, 0.436);
+ background-image: linear-gradient(to right,rgb(179, 181, 202),rgb(113, 118, 174));
+}
+
+ 
+/* ---------------------contant style ends----------------------- */
+
+/*-------------------------------- footer style starts------------------------------- */
+.footer{
+  background-color:rgba(226, 232, 238, 0.603);
+  box-shadow:0px 0px 12px 0px rgb(0 0 0 / 10%);
+}
+.footer img.ffimg{
+    width: 120px;
+    height: 100px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 50px;
+}
+.footer .sec h4{
+    font-size: 20px;
+}
+.footer .sec p{
+    font-size: 15px;
+    font-family: 'Baloo 2', cursive;
+    color: rgba(0, 0, 0, 0.696);
+}
+.footer .sec, .footer .sec1{
+    border-left: 1px solid rgba(131, 139, 153, 0.603);
+    padding-left: 10px;
+    margin-top: 20px;
+    text-align: center;
+}
+.footer .sec i{
+    font-size: 30px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.fa-phone-rotary{
+    color: brown;
+}
+.fa-phone-rotary:hover{
+    color: rgba(165, 42, 42, 0.785);
+    transform: scale(1.1,1.1);
+}
+.fa-map-marker-alt{
+    color: rgb(55, 103, 28);
+}
+.fa-map-marker-alt:hover{
+    color: rgb(86, 156, 45);
+    transform: scale(1.1,1.1);
+}
+.fa-clock{
+    color: rgb(103, 28, 102);
+}
+.fa-clock:hover{
+    color:rgba(164, 71, 162, 0.87) ;
+    transform: scale(1.1,1.1);
+}
+.fa-envelope-open-text{
+    color: rgb(160, 138, 24);
+}
+.fa-envelope-open-text:hover{
+    color: rgba(160, 137, 24, 0.674);
+    transform: scale(1.1,1.1);
+}
+.fa-hands-heart{
+    color: rgb(184, 82, 145);
+}
+.lp{
+color: rgb(0, 0, 0);
+font-weight: 400;
+text-shadow: 1px 2px 3px rgb(120, 120, 186) ;
+font-size: 15px;
+font-family: 'Oleo Script Swash Caps';
+margin-top: -10px;
+}
+.footer .sec1 i{
+ cursor: pointer;
+}
+.footer .sec1 ul{
+    display: flex;
+    flex-direction: row;
+}
+.footer .sec1 ul li{
+    list-style: none;
+    margin-right: 5px;
+}
+/*-------------------------------- footer style ends--------------------------------- */
+
+
+/* -------------------------------final style starts--------------------------------- */
+.final{
+    background-color: rgba(20, 20, 20, 0.112);
+    box-shadow:0px 0px 15px 0px rgb(0 0 0 / 10%);
+    color: rgb(23, 11, 2);
+    padding-bottom: 1px;
+}
+.final p{
+    padding-top: 20px;
+    font-family: 'Baloo 2', cursive;
+}
+.fa-heart{
+    color: rgb(171, 29, 29);
+}
+/* -------------------------------final style ends--------------------------------- */
